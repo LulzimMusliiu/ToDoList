@@ -1,0 +1,216 @@
+@import url("https://rsms.me/inter/inter.css");
+html {
+  font-family: "Inter", sans-serif;
+}
+
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: "Inter var", sans-serif;
+  }
+}
+:root {
+  --bg-page: #1a1a1a;
+  --text-color: #f3f3f3;
+  --card-bg: #202020;
+  --icon-bg: #45423c;
+  --blue: #0870f8;
+  --blue-rgb: 8, 112, 248;
+  --orange: #ff9232;
+  --g-purple: linear-gradient(30deg, #85f, #9966ff);
+  --g-yellow: linear-gradient(30deg, #fc0, #fc0);
+  --g-red: linear-gradient(30deg, #f36, #f24);
+  --g-blue: linear-gradient(30deg, #0cf, #0af);
+  --g-purple: linear-gradient(30deg, #85f, #9966ff);
+  --range: 0%;
+  --shadow: rgba(0, 6, 39, 0.1);
+  --light-shadow: rgba(255, 255, 255, 0.8);
+  --light-shadow-2: rgba(255, 255, 255, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+}
+*:focus {
+  outline: none;
+}
+
+html,
+body,
+.full-width {
+  height: 100%;
+}
+
+body {
+  background: var(--bg-page);
+  color: var(--text-color);
+}
+body,
+body html {
+  margin: 0;
+  padding: 0;
+}
+
+.hide {
+  display: none;
+  visibility: hidden;
+  height: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+p,
+a,
+label {
+  margin: 0;
+}
+h1.link,
+h2.link,
+h3.link,
+h4.link,
+h5.link,
+h6.link,
+span.link,
+p.link,
+a.link,
+label.link {
+  cursor: pointer;
+}
+@media (hover: hover) {
+  h1.link:hover,
+h2.link:hover,
+h3.link:hover,
+h4.link:hover,
+h5.link:hover,
+h6.link:hover,
+span.link:hover,
+p.link:hover,
+a.link:hover,
+label.link:hover {
+    filter: brightness(120%) saturate(120%);
+  }
+}
+
+.todo-list-wrapper {
+  line-height: 1;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+  vertical-align: baseline;
+  z-index: 0;
+  position: relative;
+  background: #242424;
+  border-radius: 12px;
+  max-width: 700px;
+  width: 100%;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.tabs {
+  padding: 5px 20px;
+}
+
+.tab {
+  display: inline-flex;
+  align-items: center;
+  min-height: 35px;
+  border-bottom: 2px solid var(--blue);
+  padding: 0 10px;
+}
+.tab span {
+  font-weight: 600;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  min-width: 30px;
+  font-size: 13px;
+  background: var(--g-blue);
+  border-radius: 50%;
+}
+
+.todo-container {
+  padding: 15px;
+}
+
+.todo {
+  min-height: 30px;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+  vertical-align: baseline;
+  letter-spacing: 0.000001px;
+  z-index: 0;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  column-gap: 8px;
+  row-gap: 4px;
+  align-items: flex-start;
+  white-space: normal;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 0;
+  line-height: 20px;
+  color: #fff;
+  grid-column-start: 1;
+  padding-right: 8px;
+}
+.todo.finished {
+  opacity: 0.5;
+}
+.todo.finished span {
+  text-decoration: line-through;
+}
+
+.keyboard {
+  min-height: 100px;
+  background: #1f1f1f;
+  padding: 15px;
+  color: #fff;
+}
+.keyboard input {
+  font-weight: 500;
+}
+.keyboard textarea {
+  font-size: 13px;
+  resize: none;
+}
+.keyboard input,
+.keyboard textarea {
+  background: transparent;
+  border: none;
+  caret-color: #fff;
+  color: currentColor;
+  color: currentColor;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.keyboard button {
+  background: #9b78ff;
+  border: none;
+  font-size: 13px;
+  height: 28px;
+  padding: 0 12px;
+  border-radius: 4px;
+}
+.keyboard button:focus {
+  box-shadow: 0 0 0 1px #1b1b1b, 0 0 0 2px #9b78ff;
+}
+
+.delete-btn {
+  font-size: 13px;
+  height: 26px;
+  padding: 0 10px;
+  margin-left: auto;
+}
